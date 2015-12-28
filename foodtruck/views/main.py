@@ -53,7 +53,9 @@ def index():
         if pd:
             data['edited_pages'].append(pd)
 
+    data['site_name'] = site.name
     data['url_bake'] = url_for('bake_site')
+    data['url_preview'] = url_for('preview_site_root', sitename=site.name)
 
     with_menu_context(data)
     return render_template('dashboard.html', **data)
