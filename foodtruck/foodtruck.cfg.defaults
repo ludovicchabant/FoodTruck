@@ -1,0 +1,11 @@
+[triggers]
+bake = chef bake
+bake.is_shell = false
+
+[scm]
+type = hg
+
+[security]
+username =
+password =
+
