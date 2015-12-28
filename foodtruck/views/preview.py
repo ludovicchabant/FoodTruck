@@ -6,7 +6,7 @@ from piecrust.serving.server import Server
 from ..web import app
 
 
-@app.route('/site/<sitename>')
+@app.route('/site/<sitename>/')
 @login_required
 def preview_site_root(sitename):
     return preview_site(sitename, '/')
